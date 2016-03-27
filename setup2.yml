@@ -28,5 +28,6 @@
     - vim.conf
     - xorg.conf
     - zsh
+    - git.conf
     # - clock
     # - pm-utils

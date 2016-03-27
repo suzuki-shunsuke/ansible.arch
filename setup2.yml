@@ -3,6 +3,7 @@
   connection: local
   vars:
     home: /home/shunsuke
+    username: shunsuke
   roles:
     - upgrade_pacman
     - chromium

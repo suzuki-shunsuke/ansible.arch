@@ -12,4 +12,5 @@
     - lightdm
     - openbox
     - urxvt
+    - xf86-input-synaptics
     - vim

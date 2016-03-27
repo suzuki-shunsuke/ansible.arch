@@ -1,0 +1,13 @@
+---
+- locale_gen: name=ja_JP.UTF-8
+  become: yes
+- locale_gen: name=en_US.UTF-8
+  become: yes
+- name: copy locale.conf
+  copy: src=locale.conf dest=/etc/locale.conf
+  become: yes
+- name: set timezone
+  file: src=/usr/share/zoneinfo/Asia/Tokyo
+        dest=/etc/localtime
+        state=link
+  become: yes

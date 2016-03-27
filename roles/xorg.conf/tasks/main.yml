@@ -1,0 +1,13 @@
+---
+- name: clone xorg.conf
+  git: repo=https://github.com/suzuki-shunsuke/xorg.conf.git dest={{home}}/.xorg
+       update=no
+- name: make symbolic link to .Xresources
+  file: dest={{home}}/.Xresources src={{home}}/.xorg/.Xresources
+        state=link
+- name: make symbolic link to .xprofile
+  file: dest={{home}}/.xprofile src={{home}}/.xorg/.xprofile
+        state=link
+- name: install xorg-xrdb
+  pacman: name=xorg-xrdb
+  become: yes

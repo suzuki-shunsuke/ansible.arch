@@ -1,0 +1,29 @@
+---
+- hosts: 127.0.0.1
+  connection: local
+  vars:
+    home: /home/shunsuke
+  roles:
+    - upgrade_pacman
+    - chromium
+    - clock
+    - dmenu
+    - docker
+    - evince
+    - fcitx-mozc
+    - feh
+    - fontconfig
+    - gimp
+    - gnome-keyring
+    - go
+    - hub
+    - libreoffice
+    - locale
+    - nvm
+    - pyenv
+    - rbenv
+    - silver_searcher
+    - tmux
+    - tree
+    - vim.conf
+    # - pm-utils

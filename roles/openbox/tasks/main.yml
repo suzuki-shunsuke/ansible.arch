@@ -1,0 +1,8 @@
+---
+- name: install openbox
+  pacman: name=openbox
+  become: yes
+- name: clone my git repository
+  git: repo=https://github.com/suzuki-shunsuke/openbox.conf.git
+       dest={{home}}/.config/openbox
+       update=no

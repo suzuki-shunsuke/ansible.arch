@@ -1,0 +1,6 @@
+## evince
+
+* evinceのインストール
+
+PDFビューワ
+

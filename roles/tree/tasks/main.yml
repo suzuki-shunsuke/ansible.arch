@@ -1,0 +1,4 @@
+---
+- name: install tree
+  pacman: name=tree
+  become: yes

@@ -1,0 +1,4 @@
+---
+- name: install dmenu
+  pacman: name=dmenu
+  become: yes

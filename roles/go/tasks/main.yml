@@ -1,0 +1,8 @@
+---
+- name: confirm whether go is installed
+  stat: path=/usr/local/go
+  register: st
+- name: install go
+  unarchive: src=https://storage.googleapis.com/golang/go{{go_version}}.linux-amd64.tar.gz dest=/usr/local copy=no
+  become: yes
+  when: st.stat.exists == False

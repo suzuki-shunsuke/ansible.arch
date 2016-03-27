@@ -1,0 +1,4 @@
+---
+- name: install xsel
+  pacman: name=xsel
+  become: yes

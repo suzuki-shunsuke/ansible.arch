@@ -1,0 +1,4 @@
+---
+- name: install pyenv
+  git: repo=https://github.com/yyuu/pyenv.git dest={{home}}/.pyenv
+       update=no

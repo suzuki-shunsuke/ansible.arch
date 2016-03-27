@@ -1,0 +1,4 @@
+---
+- name: install evince(PDF Viewer)
+  pacman: name=evince
+  become: yes

@@ -1,0 +1,4 @@
+---
+- name: set clock
+  shell: timedatectl set-ntp true
+  become: yes

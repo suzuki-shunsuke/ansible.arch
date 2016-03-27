@@ -1,0 +1,7 @@
+---
+- name: install fcitx
+  pacman: name=fcitx
+  become: yes
+- name: install fcitx-configtool
+  pacman: name=fcitx-configtool
+  become: yes

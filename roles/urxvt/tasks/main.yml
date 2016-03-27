@@ -1,0 +1,4 @@
+---
+- name: install urxvt
+  pacman: name=rxvt-unicode
+  become: yes

@@ -1,0 +1,10 @@
+---
+- name: install networkmanager
+  pacman: name=networkmanager
+  become: yes
+- name: start NetworkManager
+  service: name=NetworkManager state=started
+  become: yes
+- name: enable NetworkManager
+  service: name=NetworkManager enabled=yes
+  become: yes

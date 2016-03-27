@@ -1,0 +1,10 @@
+---
+- name: mkdir gh/ss
+  file: path={{home}}/gh/ss state=directory
+- name: clone my git repository
+  git: repo=https://github.com/suzuki-shunsuke/git.conf
+       dest={{home}}/gh/ss/git.conf
+       update=no
+- name: make symbolic link to .gitconfig
+  file: dest={{home}}/.gitconfig src={{home}}/gh/ss/git.conf/.gitconfig
+        state=link

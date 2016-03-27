@@ -1,0 +1,4 @@
+---
+- name: install xorg-server
+  pacman: name=xorg-server
+  become: yes

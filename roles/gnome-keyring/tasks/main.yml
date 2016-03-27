@@ -1,0 +1,12 @@
+---
+- name: install gnome-keyring
+  pacman: name=gnome-keyring
+  become: yes
+- name: install libgnome-keyring
+  pacman: name=libgnome-keyring
+  become: yes
+- name: compile helper
+  shell: make
+  args:
+    chdir: /usr/share/git/credential/gnome-keyring
+  become: yes

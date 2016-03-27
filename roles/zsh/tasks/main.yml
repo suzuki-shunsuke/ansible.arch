@@ -1,0 +1,17 @@
+---
+- name: clone zplug
+  git: repo=https://github.com/b4b4r07/zplug.git
+       dest={{home}}/.zplug
+       update=no
+- name: clone my zsh config repository
+  git: repo=https://github.com/suzuki-shunsuke/zsh.conf.git
+       dest={{home}}/.zsh
+       update=no
+- name: make symbolic link to .zshrc
+  file: dest={{home}}/.zshrc src={{home}}/.zsh/.zshrc
+        state=link force=yes
+- name: install zsh
+  pacman: name=zsh
+  become: yes
+- name: change the default shell to zsh
+  user: name={{username}} shell=/usr/bin/zsh

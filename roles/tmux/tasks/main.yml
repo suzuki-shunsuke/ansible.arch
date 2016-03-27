@@ -1,0 +1,13 @@
+---
+- name: install tmux
+  pacman: name=tmux
+  become: yes
+- name: clone tmux config repository
+  git: repo=https://github.com/suzuki-shunsuke/tmux.conf dest={{home}}/.tmux
+       update=no
+- name: clone tpm
+  git: repo=https://github.com/tmux-plugins/tpm dest={{home}}/.tmux/plugins/tpm
+       update=no
+- name: make symbolic link(.tmux.conf)
+  file: dest={{home}}/.tmux.conf src={{home}}/.tmux/.tmux.conf
+        state=link

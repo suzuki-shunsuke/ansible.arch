@@ -1,0 +1,7 @@
+---
+- name: copy mirrorlist
+  copy: src=mirrorlist dest=/etc/pacman.d/mirrorlist
+  become: yes
+- name: update mirrorlist
+  pacman: update_cache=true upgrade=yes
+  become: yes

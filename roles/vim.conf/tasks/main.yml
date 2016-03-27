@@ -1,0 +1,21 @@
+---
+- name: mkdir .vimundo
+  file: path={{home}}/.vimundo state=directory
+- name: mkdir gh/ss
+  file: path={{home}}/gh/ss state=directory
+- name: clone my git repository
+  git: repo=https://github.com/suzuki-shunsuke/vim.conf.git
+       dest={{home}}/gh/ss/vim.conf
+       update=no
+- name: make symbolic link to .vim
+  file: dest={{home}}/.vim src={{home}}/gh/ss/vim.conf/.vim
+        state=link
+- name: make symbolic link to .vimrc
+  file: dest={{home}}/.vimrc src={{home}}/gh/ss/vim.conf/.vimrc
+        state=link
+- name: make .vim/bundle directory
+  file: path={{home}}/.vim/bundle state=directory
+- name: clone neobundle
+  git: repo=https://github.com/Shougo/neobundle.vim.git
+       dest={{home}}/.vim/bundle/neobundle.vim
+       update=no

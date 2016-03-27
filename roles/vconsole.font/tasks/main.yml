@@ -1,0 +1,4 @@
+---
+- name: copy vconsole.conf
+  copy: src=vconsole.conf dest=/etc/vconsole.conf
+  become: yes

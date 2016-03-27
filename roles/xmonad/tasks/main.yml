@@ -1,0 +1,4 @@
+---
+- name: install xmonad
+  pacman: name=xmonad
+  become: yes

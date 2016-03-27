@@ -1,0 +1,4 @@
+---
+- name: install wget
+  pacman: name=wget
+  become: yes

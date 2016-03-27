@@ -1,0 +1,4 @@
+---
+- name: install pm-utils
+  pacman: name=pm-utils
+  become: yes

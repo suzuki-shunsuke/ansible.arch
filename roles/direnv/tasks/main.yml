@@ -1,0 +1,14 @@
+---
+- name: confirm whether direnv is installed
+  stat: path=/usr/local/bin/direnv
+  register: st
+- block:
+  - name: clone direnv
+    git: repo=https://github.com/direnv/direnv.git
+        dest=/tmp/direnv update=no
+  - name: install direnv
+    shell: make install
+    args:
+      chdir: /tmp/direnv
+    become: yes
+  when: st.stat.exists == False

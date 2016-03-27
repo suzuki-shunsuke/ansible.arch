@@ -1,0 +1,5 @@
+---
+- name: clone my git repository
+  git: repo=https://github.com/suzuki-shunsuke/font.conf
+       dest={{home}}/.config/fontconfig
+       update=no

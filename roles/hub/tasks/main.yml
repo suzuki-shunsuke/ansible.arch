@@ -1,0 +1,10 @@
+---
+- name: clone hub
+  git: repo=https://github.com/github/hub dest=/tmp/hub
+       update=no
+- name: make {{home}}/bin directory
+  file: path={{home}}/bin state=directory
+- name: install hub
+  shell: ./script/build -o {{home}}/bin/hub
+  args:
+    chdir: /tmp/hub

@@ -1,0 +1,4 @@
+---
+- name: install rbenv
+  git: repo=https://github.com/rbenv/rbenv.git dest={{home}}/.rbenv
+       update=no

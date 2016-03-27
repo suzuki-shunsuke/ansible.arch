@@ -12,6 +12,7 @@
     - evince
     - fcitx-mozc
     - feh
+    - alsa-utils
     - fontconfig
     - gimp
     - gnome-keyring

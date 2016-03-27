@@ -25,4 +25,5 @@
     - tmux
     - tree
     - vim.conf
+    - xorg.conf
     # - pm-utils

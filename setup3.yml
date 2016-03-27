@@ -6,4 +6,5 @@
   roles:
     - upgrade_pacman
     - fzf
+    - hub
     - direnv

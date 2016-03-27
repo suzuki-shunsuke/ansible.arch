@@ -8,6 +8,7 @@
     - upgrade_pacman
     - wget
     - git
+    - xorg
     - lightdm
     - openbox
     - urxvt

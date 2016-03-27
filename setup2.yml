@@ -25,5 +25,6 @@
     - tree
     - vim.conf
     - xorg.conf
+    - zsh
     # - clock
     # - pm-utils

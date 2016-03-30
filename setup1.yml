@@ -3,6 +3,7 @@
   connection: local
   vars:
     home: /home/shunsuke
+    ghq_root: /home/shunsuke/.ghq
   roles:
     - mirror
     - upgrade_pacman

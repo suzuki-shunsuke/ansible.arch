@@ -3,8 +3,10 @@
   connection: local
   vars:
     home: /home/shunsuke
+    ghq_root: /home/shunsuke/.ghq
   roles:
     - upgrade_pacman
     - fzf
     - hub
     - direnv
+    - xorg.conf

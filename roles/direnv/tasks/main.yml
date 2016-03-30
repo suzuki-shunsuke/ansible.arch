@@ -4,7 +4,7 @@
   register: st
 - block:
   - name: clone direnv
-    git: repo=https://github.com/direnv/direnv.git
+    git: repo=https://github.com/direnv/direnv
         dest=/tmp/direnv update=no
   - name: install direnv
     shell: make install

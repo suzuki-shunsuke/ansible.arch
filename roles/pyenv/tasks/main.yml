@@ -1,4 +1,13 @@
 ---
+- name: mkdir
+  file: path={{ghq_root}}/github.com/yyuu
+        state=directory
 - name: install pyenv
-  git: repo=https://github.com/yyuu/pyenv.git dest={{home}}/.pyenv
+  git: repo=https://github.com/yyuu/pyenv
+       dest={{ghq_root}}/github.com/yyuu/pyenv
        update=no
+- name: make symbolic link to pyenv
+  file: src={{ghq_root}}/github.com/yyuu/pyenv
+        dest={{home}}/.pyenv
+        state=link
+        force=yes

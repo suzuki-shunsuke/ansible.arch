@@ -1,8 +1,15 @@
 ---
+- name: mkdir
+  file: path={{ghq_root}}/github.com/suzuki-shunsuke
+        state=directory
 - name: install openbox
   pacman: name=openbox
   become: yes
 - name: clone my git repository
-  git: repo=https://github.com/suzuki-shunsuke/openbox.conf.git
-       dest={{home}}/.config/openbox
+  git: repo=https://github.com/suzuki-shunsuke/openbox.conf
+       dest={{ghq_root}}/github.com/suzuki-shunsuke/openbox.conf
        update=no
+- name: make symbolic link to openbox
+  file: src={{ghq_root}}/github.com/suzuki-shunsuke/openbox.conf
+        dest={{home}}/.config/openbox
+        state=link

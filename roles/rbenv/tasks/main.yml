@@ -1,4 +1,13 @@
 ---
+- name: mkdir
+  file: path={{ghq_root}}/github.com/rbenv
+        state=directory
 - name: install rbenv
-  git: repo=https://github.com/rbenv/rbenv.git dest={{home}}/.rbenv
+  git: repo=https://github.com/rbenv/rbenv
+       dest={{ghq_root}}/github.com/rbenv/rbenv
        update=no
+- name: make symbolic link to rbenv
+  file: src={{ghq_root}}/github.com/rbenv/rbenv
+        dest={{home}}/.rbenv
+        state=link
+        force=yes

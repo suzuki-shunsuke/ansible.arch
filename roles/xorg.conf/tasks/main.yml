@@ -1,12 +1,18 @@
 ---
+- name: mkdir
+  file: path={{ghq_root}}/github.com/suzuki-shunsuke
+        state=directory
 - name: clone xorg.conf
-  git: repo=https://github.com/suzuki-shunsuke/xorg.conf.git dest={{home}}/.xorg
+  git: repo=https://github.com/suzuki-shunsuke/xorg.conf
+       dest={{ghq_root}}/github.com/suzuki-shunsuke/xorg.conf
        update=no
 - name: make symbolic link to .Xresources
-  file: dest={{home}}/.Xresources src={{home}}/.xorg/.Xresources
+  file: src={{ghq_root}}/github.com/suzuki-shunsuke/xorg.conf/.Xresources
+        dest={{home}}/.Xresources
         state=link
 - name: make symbolic link to .xprofile
-  file: dest={{home}}/.xprofile src={{home}}/.xorg/.xprofile
+  file: src={{ghq_root}}/github.com/suzuki-shunsuke/xorg.conf/.xprofile
+        dest={{home}}/.xprofile
         state=link
 - name: install xorg-xrdb
   pacman: name=xorg-xrdb

@@ -4,6 +4,7 @@
   vars:
     home: /home/shunsuke
     username: shunsuke
+    ghq_root: /home/shunsuke/.ghq
   roles:
     - upgrade_pacman
     - chromium
@@ -28,6 +29,7 @@
     - vim.conf
     - xorg.conf
     - zsh
+    - seahorse
     - git.conf
     # - clock
     # - pm-utils

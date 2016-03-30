@@ -1,15 +1,31 @@
 ---
+- name: mkdir
+  file: path={{ghq_root}}/github.com/suzuki-shunsuke
+        state=directory
+- name: mkdir
+  file: path={{ghq_root}}/github.com/b4b4r07
+        state=directory
 - name: clone zplug
-  git: repo=https://github.com/b4b4r07/zplug.git
-       dest={{home}}/.zplug
+  git: repo=https://github.com/b4b4r07/zplug
+       dest={{ghq_root}}/github.com/b4b4r07/zplug
        update=no
 - name: clone my zsh config repository
-  git: repo=https://github.com/suzuki-shunsuke/zsh.conf.git
-       dest={{home}}/.zsh
+  git: repo=https://github.com/suzuki-shunsuke/zsh.conf
+       dest={{ghq_root}}/github.com/suzuki-shunsuke/zsh.conf
        update=no
 - name: make symbolic link to .zshrc
-  file: dest={{home}}/.zshrc src={{home}}/.zsh/.zshrc
-        state=link force=yes
+  file: src={{ghq_root}}/github.com/suzuki-shunsuke/zsh.conf/.zshrc
+        dest={{home}}/.zshrc
+        state=link
+        force=yes
+- name: make symbolic link to .zplug
+  file: src={{ghq_root}}/github.com/b4b4r07/zplug
+        dest={{home}}/.zplug
+        state=link
+- name: make symbolic link to .zsh
+  file: src={{ghq_root}}/github.com/suzuki-shunsuke/zsh.conf
+        dest={{home}}/.zsh
+        state=link
 - name: install zsh
   pacman: name=zsh
   become: yes

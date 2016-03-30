@@ -1,0 +1,4 @@
+---
+- name: install stack
+  pacman: name=stack
+  become: yes

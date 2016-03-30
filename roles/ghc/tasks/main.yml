@@ -1,0 +1,4 @@
+---
+- name: install ghc
+  pacman: name=ghc
+  become: yes

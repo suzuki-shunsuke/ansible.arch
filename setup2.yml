@@ -31,5 +31,7 @@
     - zsh
     - seahorse
     - git.conf
+    - ghc
+    - stack
     # - clock
     # - pm-utils

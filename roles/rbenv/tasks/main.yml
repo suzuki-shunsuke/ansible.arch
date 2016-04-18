@@ -6,8 +6,18 @@
   git: repo=https://github.com/rbenv/rbenv
        dest={{ghq_root}}/github.com/rbenv/rbenv
        update=no
+- name: install ruby-build
+  git: repo=https://github.com/rbenv/ruby-build
+       dest={{ghq_root}}/github.com/rbenv/ruby-build
+       update=no
+- name: mkdir
+  file: path={{ghq_root}}/github.com/rbenv/rbenv/plugins
+        state=directory
 - name: make symbolic link to rbenv
   file: src={{ghq_root}}/github.com/rbenv/rbenv
         dest={{home}}/.rbenv
         state=link
-        force=yes
+- name: make symbolic link to rbenv
+  file: src={{ghq_root}}/github.com/rbenv/ruby-build
+        dest={{home}}/.rbenv/plugins/ruby-build
+        state=link

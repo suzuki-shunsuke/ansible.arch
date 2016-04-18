@@ -1,0 +1,4 @@
+---
+- name: install abs
+  pacman: name=abs
+  become: yes

@@ -1,0 +1,4 @@
+---
+- name: install dkms
+  pacman: name=dkms
+  become: yes

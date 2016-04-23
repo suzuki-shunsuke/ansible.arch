@@ -1,0 +1,4 @@
+---
+- name: install tlp
+  pacman: name=tlp
+  become: yes

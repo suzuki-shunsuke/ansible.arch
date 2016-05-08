@@ -1,7 +1,7 @@
 ---
 - name: make symbolic links
   file: src={{ghq_root}}/github.com/{{item.src}}
-        dest={{home}}/{{dest}}
+        dest={{home}}/{{item.dest}}
   with_items:
     - { src: suzuki-shunsuke/zsh.conf/.zshrc, dest: .zshrc }
     - { src: b4b4r07/zplug, dest: .zplug }

@@ -1,11 +1,4 @@
 ---
-- name: mkdir
-  file: path={{ghq_root}}/github.com/suzuki-shunsuke
-        state=directory
-- name: clone xorg.conf
-  git: repo=https://github.com/suzuki-shunsuke/xorg.conf
-       dest={{ghq_root}}/github.com/suzuki-shunsuke/xorg.conf
-       update=no
 - name: make symbolic link to .Xresources
   file: src={{ghq_root}}/github.com/suzuki-shunsuke/xorg.conf/.Xresources
         dest={{home}}/.Xresources

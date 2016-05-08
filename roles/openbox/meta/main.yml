@@ -1,5 +1,5 @@
 ---
 dependencies:
-  - { role: xorg-server }
+  - role: xorg-server
   - role: tint2
   - { role: ghq-get, repo: openbox.conf }

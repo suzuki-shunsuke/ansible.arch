@@ -1,4 +1,7 @@
 ---
+- name: mkdir {{home}}/.config
+  file: path={{home}}/.config
+        state=directory
 - name: install tint2
   pacman: name=tint2
   become: yes

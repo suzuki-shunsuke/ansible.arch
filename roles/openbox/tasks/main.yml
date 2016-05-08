@@ -1,4 +1,7 @@
 ---
+- name: mkdir {{home}}/.config
+  file: path={{home}}/.config
+        state=directory
 - name: install openbox
   pacman: name=openbox
   become: yes

@@ -1,3 +1,5 @@
 ---
 dependencies:
-  - { role: xorg-server }
+  - role: xorg-server
+  - role: ghq-get
+    repo: xorg.conf

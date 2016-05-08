@@ -1,0 +1,9 @@
+---
+- name: install essential utilities
+  pacman: name={{item}}
+  become: yes
+  with_items:
+    - unzip
+    - bzip2
+    - gzip
+    - xz

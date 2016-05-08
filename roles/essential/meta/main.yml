@@ -2,6 +2,7 @@
 dependencies:
   - role: mirror
   - role: upgrade_pacman
+  - role: unarchive
   - role: go
   - role: hub
   - role: git.conf

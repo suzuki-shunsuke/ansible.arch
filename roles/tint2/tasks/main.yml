@@ -1,14 +1,7 @@
 ---
-- name: mkdir
-  file: path={{ghq_root}}/github.com/suzuki-shunsuke
-        state=directory
 - name: install tint2
   pacman: name=tint2
   become: yes
-- name: clone my git repository
-  git: repo=https://github.com/suzuki-shunsuke/tint2.conf
-       dest={{ghq_root}}/github.com/suzuki-shunsuke/tint2.conf
-       update=no
 - name: make symbolic link to tint2
   file: src={{ghq_root}}/github.com/suzuki-shunsuke/tint2.conf
         dest={{home}}/.config/tint2

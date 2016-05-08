@@ -6,7 +6,4 @@
   pacman: name=libgnome-keyring
   become: yes
 - name: compile helper
-  shell: make
-  args:
-    chdir: /usr/share/git/credential/gnome-keyring
-  become: yes
+  debug: msg="cd /usr/share/git/credential/gnome-keyring && sudo make"

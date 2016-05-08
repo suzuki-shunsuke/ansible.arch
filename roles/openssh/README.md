@@ -1,4 +1,0 @@
-## openssh
-
-* opensshのインストール
-

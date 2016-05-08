@@ -1,0 +1,4 @@
+---
+dependencies:
+  - { role: ghq-get, user: rbenv, repo: rbenv }
+  - { role: ghq-get, user: rbenv, repo: ruby-build }

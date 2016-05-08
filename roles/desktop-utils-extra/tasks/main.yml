@@ -1,0 +1,12 @@
+---
+- name: pacman -Syu
+  pacman: update_cache=yes upgrade=yes
+  become: yes
+- name: install extra desktop utilities
+  pacman: name={{item}}
+  become: yes
+  with_items:
+    - evince
+    - gimp
+    - libreoffice
+    - seahorse

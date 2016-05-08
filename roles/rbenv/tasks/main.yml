@@ -1,16 +1,5 @@
 ---
 - name: mkdir
-  file: path={{ghq_root}}/github.com/rbenv
-        state=directory
-- name: install rbenv
-  git: repo=https://github.com/rbenv/rbenv
-       dest={{ghq_root}}/github.com/rbenv/rbenv
-       update=no
-- name: install ruby-build
-  git: repo=https://github.com/rbenv/ruby-build
-       dest={{ghq_root}}/github.com/rbenv/ruby-build
-       update=no
-- name: mkdir
   file: path={{ghq_root}}/github.com/rbenv/rbenv/plugins
         state=directory
 - name: make symbolic link to rbenv

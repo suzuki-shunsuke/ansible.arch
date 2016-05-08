@@ -1,4 +1,0 @@
----
-- name: install seahorse
-  pacman: name=seahorse
-  become: yes

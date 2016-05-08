@@ -1,4 +1,0 @@
----
-- name: install ttf-ubuntu-font-family
-  pacman: name=ttf-ubuntu-font-family
-  become: yes

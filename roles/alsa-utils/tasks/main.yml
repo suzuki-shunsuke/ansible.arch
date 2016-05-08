@@ -1,4 +1,0 @@
----
-- name: install alsa-utils
-  pacman: name=alsa-utils
-  become: yes

@@ -1,4 +1,0 @@
----
-- name: install feh
-  pacman: name=feh
-  become: yes

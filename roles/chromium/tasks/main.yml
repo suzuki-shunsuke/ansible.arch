@@ -1,4 +1,0 @@
----
-- name: install chromium
-  pacman: name=chromium
-  become: yes

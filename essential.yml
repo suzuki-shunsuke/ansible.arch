@@ -1,0 +1,8 @@
+---
+- hosts: 127.0.0.1
+  connection: local
+  vars:
+    home: {{ansible_env.HOME}}
+    ghq_root: {{home}}/.ghq
+  roles:
+    - essential

@@ -1,22 +1,8 @@
 ---
-- name: mkdir
-  file: path={{ghq_root}}/github.com/suzuki-shunsuke
-        state=directory
-- name: mkdir
-  file: path={{ghq_root}}/github.com/tmux-plugins
-        state=directory
 - name: install tmux
   pacman: name=tmux
   become: yes
-- name: clone tmux config repository
-  git: repo=https://github.com/suzuki-shunsuke/tmux.conf
-       dest={{ghq_root}}/github.com/suzuki-shunsuke/tmux.conf
-       update=no
-- name: clone tpm
-  git: repo=https://github.com/tmux-plugins/tpm
-       dest={{ghq_root}}/github.com/tmux-plugins/tpm
-       update=no
-- name: make symbolic link(.tmux.conf)
+- name: make symbolic link(tpm)
   file: src={{ghq_root}}/github.com/tmux-plugins/tpm
         dest={{ghq_root}}/github.com/suzuki-shunsuke/tmux.conf/plugins/tpm
         state=link

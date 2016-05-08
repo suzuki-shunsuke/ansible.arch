@@ -1,4 +1,0 @@
----
-- name: install fcitx-mozc
-  pacman: name=fcitx-mozc
-  become: yes

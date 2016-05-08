@@ -1,3 +1,4 @@
 ---
 dependencies:
   - role: go
+  - { role: ghq-get, user: github, repo: hub }

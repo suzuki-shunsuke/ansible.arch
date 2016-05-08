@@ -1,4 +1,0 @@
----
-- name: install libreoffice-still(stable version)
-  pacman: name=libreoffice-still
-  become: yes

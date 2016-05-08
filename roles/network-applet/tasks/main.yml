@@ -1,10 +1,8 @@
 ---
-- name: install network-manager-applet
-  pacman: name=network-manager-applet
+- name: install network applet utilities
+  pacman: name={{item}}
   become: yes
-- name: install xfce4-notifyd
-  pacman: name=xfce4-notifyd
-  become: yes
-- name: install gnome-icon-theme
-  pacman: name=gnome-icon-theme
-  become: yes
+  with_items:
+    - network-manager-applet
+    - xfce4-notifyd
+    - gnome-icon-theme

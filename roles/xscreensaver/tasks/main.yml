@@ -1,4 +1,0 @@
----
-- name: install xscreensaver
-  pacman: name=xscreensaver
-  become: yes

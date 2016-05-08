@@ -1,0 +1,14 @@
+---
+- name: pacman -Syu
+  pacman: update_cache=yes upgrade=yes
+  become: yes
+- name: install essential utilities
+  pacman: name={{item}}
+  become: yes
+  with_items:
+    - dkms
+    - tree
+    - silver_searcher
+    - wget
+    - linux-headers
+    - openssh

@@ -1,7 +1,8 @@
 ---
 - name: install fcitx
-  pacman: name=fcitx
+  pacman: name={{item}}
   become: yes
-- name: install fcitx-configtool
-  pacman: name=fcitx-configtool
-  become: yes
+  with_items:
+    - fcitx
+    - fcitx-configtool
+    - fcitx-mozc

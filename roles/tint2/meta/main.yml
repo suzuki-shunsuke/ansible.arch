@@ -1,0 +1,3 @@
+---
+dependencies:
+  - { role: ghq-get, repo: tint2.conf }

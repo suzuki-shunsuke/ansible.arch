@@ -1,4 +1,0 @@
-## pm-utils
-
-* pm-utilsのインストール
-

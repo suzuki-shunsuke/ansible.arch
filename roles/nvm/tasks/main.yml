@@ -1,13 +1,5 @@
 ---
-- name: mkdir
-  file: path={{ghq_root}}/github.com/creationix
-        state=directory
-- name: install nvm
-  git: repo=https://github.com/creationix/nvm
-       dest={{ghq_root}}/github.com/creationix/nvm
-       update=no
 - name: make symbolic link to nvm
   file: src={{ghq_root}}/github.com/creationix/nvm
         dest={{home}}/.nvm
         state=link
-        force=yes

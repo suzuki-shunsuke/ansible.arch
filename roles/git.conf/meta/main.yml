@@ -1,3 +1,4 @@
 ---
 dependencies:
   - role: gnome-keyring
+  - { role: ghq-get, repo: git.conf }

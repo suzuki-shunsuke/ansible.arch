@@ -1,4 +1,0 @@
----
-- name: install silver searcher(ag)
-  pacman: name=the_silver_searcher
-  become: yes

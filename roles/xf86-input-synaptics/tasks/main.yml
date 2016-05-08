@@ -1,4 +1,0 @@
----
-- name: install xf86-input-synaptics
-  pacman: name=xf86-input-synaptics
-  become: yes

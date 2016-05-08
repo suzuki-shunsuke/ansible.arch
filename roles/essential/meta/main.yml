@@ -1,0 +1,16 @@
+---
+dependencies:
+  - role: mirror
+  - role: upgrade_pacman
+  - role: go
+  - role: hub
+  - role: git.conf
+  - role: direnv
+  - role: locale
+  - role: network
+  - role: fzf
+  - role: zsh
+  - role: tmux
+  - role: nvm
+  - role: pyenv
+  - role: rbenv

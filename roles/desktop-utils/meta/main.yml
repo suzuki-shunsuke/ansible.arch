@@ -1,0 +1,9 @@
+---
+dependencies:
+  - { role: xorg-server }
+  - role: urxvt
+  - role: fcitx
+  - role: fontconfig
+  - role: network-applet
+  - role: openbox
+  - role: lightdm

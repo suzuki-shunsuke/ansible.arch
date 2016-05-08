@@ -1,0 +1,4 @@
+---
+dependencies:
+  - { role: git }
+  - { role: ghq-get, user: creationix, repo: nvm }

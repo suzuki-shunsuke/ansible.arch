@@ -1,4 +1,0 @@
----
-- name: install linux-headers
-  pacman: name=linux-headers
-  become: yes

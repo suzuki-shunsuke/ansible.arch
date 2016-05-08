@@ -1,0 +1,5 @@
+---
+ghq_root: "{{ansible_env.HOME}}/.ghq"
+update: no
+host: github.com
+user: suzuki-shunsuke

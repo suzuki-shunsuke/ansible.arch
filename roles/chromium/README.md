@@ -1,4 +1,0 @@
-## chromium
-
-* chromiumのインストール
-

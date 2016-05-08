@@ -1,3 +1,0 @@
-## fcitx-mozc
-
-* fcitx-mozcのインストール

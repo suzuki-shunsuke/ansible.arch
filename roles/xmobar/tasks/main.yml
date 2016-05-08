@@ -1,4 +1,0 @@
----
-- name: install xmobar
-  pacman: name=xmobar
-  become: yes

@@ -1,5 +1,5 @@
 ---
 dependencies:
-  - role: network-applet
+  - { role: xorg-server }
   - role: tint2
-  - role: fcitx
+  - { role: ghq-get, repo: openbox.conf }

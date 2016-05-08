@@ -1,16 +1,6 @@
 ---
 - name: mkdir .vimundo
   file: path={{home}}/.vimundo state=directory
-- name: mkdir
-  file: path={{ghq_root}}/github.com/suzuki-shunsuke
-        state=directory
-- name: mkdir
-  file: path={{ghq_root}}/github.com/Shougo
-        state=directory
-- name: clone my git repository
-  git: repo=https://github.com/suzuki-shunsuke/vim.conf
-       dest={{ghq_root}}/github.com/suzuki-shunsuke/vim.conf
-       update=no
 - name: make symbolic link to .vim
   file: src={{ghq_root}}/github.com/suzuki-shunsuke/vim.conf/.vim
         dest={{home}}/.vim
@@ -19,10 +9,6 @@
   file: src={{ghq_root}}/github.com/suzuki-shunsuke/vim.conf/.vimrc
         dest={{home}}/.vimrc
         state=link
-- name: clone NeoBundle
-  git: repo=https://github.com/Shougo/neobundle.vim
-       dest={{ghq_root}}/github.com/Shougo/neobundle.vim
-       update=no
 - name: make symbolic link to NeoBundle
   file: src={{ghq_root}}/github.com/Shougo/neobundle.vim
         dest={{ghq_root}}/github.com/suzuki-shunsuke/vim.conf/.vim/bundle/neobundle.vim

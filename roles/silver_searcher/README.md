@@ -1,4 +1,0 @@
-## silver searcher
-
-* Silever Searcherのインストール
-

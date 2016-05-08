@@ -1,0 +1,15 @@
+---
+- name: pacman -Syu
+  pacman: update_cache=yes upgrade=yes
+  become: yes
+- name: install desktop utilities
+  pacman: name={{item}}
+  become: yes
+  with_items:
+    - alsa-utils
+    - chromium
+    - dmenu
+    - feh
+    - xf86-input-synaptics
+    - xscreensaver
+    - tlp

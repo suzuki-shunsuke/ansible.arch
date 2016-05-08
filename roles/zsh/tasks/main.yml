@@ -11,5 +11,5 @@
   pacman: name=zsh
   become: yes
 - name: change the default shell to zsh
-  user: name={{username}} shell=/usr/bin/zsh
+  user: name={{ansible_env.USER}} shell=/usr/bin/zsh
   become: yes

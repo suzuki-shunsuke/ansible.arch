@@ -8,7 +8,7 @@
   with_items:
     - dkms
     - tree
-    - silver_searcher
+    - the_silver_searcher
     - wget
     - linux-headers
     - openssh

@@ -3,6 +3,6 @@
   connection: local
   vars:
     home: "{{ansible_env.HOME}}"
-    ghq_root: {{home}}/.ghq
+    ghq_root: "{{home}}/.ghq"
   roles:
     - essential

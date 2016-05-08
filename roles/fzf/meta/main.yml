@@ -1,4 +1,7 @@
 ---
 dependencies:
   - role: go
-  - role: fzf
+  - role: ghq-get
+    user: junegunn
+    repo: fzf
+

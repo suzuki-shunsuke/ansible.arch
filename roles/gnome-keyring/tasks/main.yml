@@ -1,4 +1,7 @@
 ---
+- name: install openssh
+  pacman: name=openssh
+  become: yes
 - name: install gnome-keyring
   pacman: name=gnome-keyring
   become: yes

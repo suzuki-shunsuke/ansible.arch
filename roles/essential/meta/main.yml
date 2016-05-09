@@ -4,7 +4,6 @@ dependencies:
   - role: upgrade_pacman
   - role: unarchive
   - role: go
-  - role: hub
   - role: git.conf
   - role: locale
   - role: network

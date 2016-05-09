@@ -1,5 +1,3 @@
 ---
 dependencies:
   - role: xsel
-  - { role: ghq-get, repo: tmux.conf }
-  - { role: ghq-get, user: tmux-plugins, repo: tpm }

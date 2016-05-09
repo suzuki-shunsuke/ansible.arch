@@ -1,7 +1,0 @@
----
-- name: mkdir {{ghq_root}}/{{host}}/{{user}}
-  file: path={{ghq_root}}/{{host}}/{{user}} state=directory
-- name: clone git repository
-  git: repo=https://{{host}}/{{user}}/{{repo}}
-       dest={{ghq_root}}/{{host}}/{{user}}/{{repo}}
-       update={{update}}

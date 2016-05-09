@@ -1,3 +1,0 @@
----
-- name: install direnv
-  debug: msg="cd {{ghq_root}}/github.com/direnv/direnv/ && sudo make install"

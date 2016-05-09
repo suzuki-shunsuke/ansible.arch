@@ -1,4 +1,0 @@
----
-dependencies:
-  - { role: ghq-get, user: Shougo, repo: neobundle.vim }
-  - { role: ghq-get, repo: vim.conf }

@@ -1,3 +1,0 @@
----
-- name: install fzf
-  debug: msg="{{ghq_root}}/github.com/junegunn/fzf/install"

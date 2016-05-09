@@ -1,4 +1,0 @@
----
-dependencies:
-  - { role: ghq-get, user: zplug, repo: zplug }
-  - { role: ghq-get, repo: zsh.conf }

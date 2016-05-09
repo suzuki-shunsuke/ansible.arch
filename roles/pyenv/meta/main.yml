@@ -1,3 +1,0 @@
----
-dependencies:
-  - { role: ghq-get, user: yyuu, repo: pyenv }

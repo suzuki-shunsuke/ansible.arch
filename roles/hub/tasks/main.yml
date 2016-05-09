@@ -1,3 +1,0 @@
----
-- name: install hub
-  debug: msg="mkdir ~/bin && cd {{ghq_root}}/github.com/github/hub && ./script/build -o {{home}}/bin/hub"

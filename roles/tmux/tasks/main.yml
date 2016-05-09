@@ -6,6 +6,9 @@
   file: src={{ghq_root}}/github.com/tmux-plugins/tpm
         dest={{ghq_root}}/github.com/suzuki-shunsuke/tmux.conf/plugins/tpm
         state=link
+  file: src={{ghq_root}}/github.com/suzuki-shunsuke/tmux.conf
+        dest={{home}}/.tmux
+        state=link
 - name: make symbolic link(.tmux.conf)
   file: src={{ghq_root}}/github.com/suzuki-shunsuke/tmux.conf/.tmux.conf
         dest={{home}}/.tmux.conf

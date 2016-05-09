@@ -5,6 +5,7 @@ dependencies:
   - role: unarchive
   - role: go
   - role: git.conf
+  - role: vim.conf
   - role: locale
   - role: network
   - role: zsh
